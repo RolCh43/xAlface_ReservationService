@@ -1,4 +1,4 @@
-package com.xalface.microservices.reservation.xAlface_ReservationService.dto;
+package com.xalface.microservices.reservation.xAlface_ReservationService.DTOs;
 
 import java.time.LocalDateTime;
 

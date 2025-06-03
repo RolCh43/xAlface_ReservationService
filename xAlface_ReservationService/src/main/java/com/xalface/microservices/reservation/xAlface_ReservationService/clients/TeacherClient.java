@@ -1,10 +1,10 @@
-package com.xalface.microservices.reservation.xAlface_ReservationService.client;
+package com.xalface.microservices.reservation.xAlface_ReservationService.clients;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.xalface.microservices.reservation.xAlface_ReservationService.dto.TeacherDTO;
+import com.xalface.microservices.reservation.xAlface_ReservationService.DTOs.TeacherDTO;
 
 @FeignClient("user-service")
 public interface TeacherClient {
