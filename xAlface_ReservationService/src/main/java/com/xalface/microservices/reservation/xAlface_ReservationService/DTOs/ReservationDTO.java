@@ -17,6 +17,7 @@ public record ReservationDTO(
     @NotNull(message = "teacherId não pode ser nulo")
     Long teacherId,
 
-     @NotNull(message = "classroomId não pode ser nulo")
+    @NotNull(message = "classroomId não pode ser nulo")
     Long classroomId
+    
 ) {}
