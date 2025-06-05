@@ -47,7 +47,7 @@ public class ValidationService {
 
     // Validação para UPDATE (sobrecarga que recebe o id da reserva, que será ignorada na verificação de conflito)
     public ReservationDTO validateUpdate(ReservationDTO dto, Long updatingReservationId) {
-        if(!dto.startDateTime().isAfter(dto.endDateTime())){
+        if(dto.startDateTime().isAfter(dto.endDateTime())){
             throw new RuntimeException("A data e hora de início devem ser anteriores à data e hora de término");
         }
         validateTeacherExists(dto.teacherId());
@@ -129,7 +129,7 @@ public class ValidationService {
         try {
             ClassroomDTO classroomDto = classroomClient.getById(classroomId);
         
-            if (!Boolean.TRUE.equals(classroomDto.isAvailable())) {
+            if (!(classroomDto.available())) {
                 throw new RuntimeException("A sala não está disponível");
             }
         

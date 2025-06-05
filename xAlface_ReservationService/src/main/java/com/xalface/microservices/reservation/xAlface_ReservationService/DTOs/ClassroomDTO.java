@@ -6,5 +6,5 @@ public record ClassroomDTO(
     String name,
     String description,
     int capacity,
-    boolean isAvailable
+    boolean available
 ) {}

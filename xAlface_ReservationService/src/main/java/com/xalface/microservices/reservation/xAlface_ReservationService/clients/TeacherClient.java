@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.xalface.microservices.reservation.xAlface_ReservationService.DTOs.TeacherDTO;
 
-@FeignClient("user-service")
+@FeignClient("xalface-userservice")
 public interface TeacherClient {
-    @GetMapping("/teachers/{id}")
-    TeacherDTO getById(@PathVariable("id") Long id);
+
+    @GetMapping("/user/teacher/{id}")
+    TeacherDTO getById(@PathVariable Long id);
 }
